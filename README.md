@@ -2,9 +2,19 @@
 
 [image1]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pong_screenshot_small.png "Pong Screenshot"
 
-[image2]: https://raw.githubusercontent.com/cipher982/DRL-DQN-Model/master/images/atari_dqn_diagram.png "Deepmind DQN"
+[pimg1]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg1.png
+[pimg2]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg2.png
+[pimg3]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg3.png
+[pimg4]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg4.png
+[pimg5]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg5.png
+[pimg6]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg6.png
+[pimg7]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg7.png
+[pimg8]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg8.png
+[pimg9]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg9.png
+[pimg10]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg10.png
+[pimg11]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pimg11.png
 
-[image3]: https://raw.githubusercontent.com/cipher982/DRL-DQN-Model/master/images/DQN_banana.png "DQN Banana"
+
 
 # Proximal Policy Optimization Notes
 #### David Rose
@@ -20,7 +30,7 @@
 
 1. Collect trajectories based on PIE THETA, initialize theta&#39;=theta
 2. Compute gradient of clipped surrogate function using the trajectories
-3. Update theta&#39; using gradient ascent
+3. Update theta' using gradient ascent
 4. Repeat steps 2-3 without generating new trajectories (a few times maybe)
 5. Set new policies (theta=theta&#39;) and go back to step 1, repeat.
 
@@ -48,9 +58,9 @@
 2. Collect trajectory using these
 2. Total (sum) reward of each trajectory
 3. Compute estimate of the reward gradient
-IMAGE g=
+    - ![pimg1]
 2. Update the policy using gradient ascent with learning rate alpha.
-IMAGE theta left arrow
+    - ![pimg2]
 2. REPEAT!
 
 ## **problems?**
@@ -67,17 +77,18 @@ IMAGE theta left arrow
   - Take one trajectory and compute gradient - bad
 - **Collect in Parallel**
   - Then average across all the multiple trajectories
-IMAGE PARRALEL
+    - ![pimg3]
 
 - **Rewards Normalization** - norm the distribution
   - Multiple trajectories feature a distribution of rewards that we can use to normalize on.
   - What rewards may be good early on (2) may not be good near the end.
-IMAGE ri left arrow
+    - ![pimg4]
+    
 - **Credit Assignment**
   - All current rewards are from the past.
   - Therefore, we can discard them, as they have no effect on future actions.
   - We can just use only the future reward as the coefficient.
-IMAGE g=
+    - ![pimg5]
 - This will help properly assign credit to the current action.
 
  - **Issues?**
@@ -87,14 +98,14 @@ IMAGE g=
 
 - **Importance Sampling**
   - Recycle old trajectories instead of throwing them away.
-  - IMAGE
+  - ![pimg6]
   - Add a re-weighting factor ^^ in addition to just averaging.
-  - IMAGE
+  - ![pimg7]
 
 - **Re-weighting the Policy Gradient**
   - The re-weighting factor is just the product of all the policy across each step.
-  - IMAGE
-  - IMAGE
+  - ![pimg8]
+  - ![pimg9]
 
 - **The Surrogate Function**
   - We can call this approximate form of the gradient as a new object
@@ -103,14 +114,14 @@ IMAGE g=
   - **BUT** : Make sure the OLD and NEW policies don&#39;t diverge too much
     - Or else the approximations can become invalid
 
-IMAGE
+![pimg10]
 
 
 
 - **Clipped Surrogate Function**
   - Keep policies from diverging too much (keep ratio around 1)
 
-IMAGE
+![pimg11]
 
 
 - **Additional Notes**
