@@ -1,17 +1,17 @@
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+[image1]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pong_screenshot.png "Pong Screenshot"
 
-[image_atari_network]: https://raw.githubusercontent.com/cipher982/DRL-DQN-Model/master/images/atari_dqn_diagram.png "Deepmind DQN"
+[image2]: https://raw.githubusercontent.com/cipher982/DRL-DQN-Model/master/images/atari_dqn_diagram.png "Deepmind DQN"
 
-[image_dqn_banana]: https://raw.githubusercontent.com/cipher982/DRL-DQN-Model/master/images/DQN_banana.png "DQN Banana"
+[image3]: https://raw.githubusercontent.com/cipher982/DRL-DQN-Model/master/images/DQN_banana.png "DQN Banana"
 
 # Proximal Policy Optimization Notes
 #### David Rose
 #### 2018-12-28
 ### Introduction
 
-![Trained Agent][image1]
+![image1]
 
 ## **Proximal Policy Optimization**
 
