@@ -37,7 +37,7 @@
 
 
 ## **ARXIV paper (openAI)**
-
+https://arxiv.org/abs/1707.06347
 - Alternate through sampling data through interaction, and optimizing a _surrogate_ objective function using SGD.
 - **OLD** :
   - Typically, policy methods perform one gradient update per data sample
