@@ -1,6 +1,6 @@
 [//]: # (Image References)
 
-[image1]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pong_screenshot.png "Pong Screenshot"
+[image1]: https://raw.githubusercontent.com/cipher982/ppo-exploration/master/images/pong_screenshot_small.png "Pong Screenshot"
 
 [image2]: https://raw.githubusercontent.com/cipher982/DRL-DQN-Model/master/images/atari_dqn_diagram.png "Deepmind DQN"
 
