@@ -7,11 +7,6 @@ sandbox for designing some PPO reinforcement learning algorithms
 
 ## **Proximal Policy Optimization**
 
--  Also **Trust Region Policy Optimization**
-  - TRPO
-- Faster and more stable learning
-- Wide domain of use
-- Favorable balance between sample complexity, simplicity, and wall-time
 
 **SUMMARY**
 
